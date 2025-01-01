@@ -28,7 +28,7 @@ const Dashboard = () => {
     ],
     admin: [
       { label: "Manage Users", path: "/dashboard/manage-users", icon: <FaUsers /> },
-      { label: "Manage Salons", path: "/dashboard/manage-salons", icon: <MdManageAccounts /> },
+      { label: "Manage Salons", path: "/dashboard/manage-owners", icon: <MdManageAccounts /> },
       { label: "Reports", path: "/dashboard/reports", icon: <FaTools /> },
       { label: "Analytics", path: "/dashboard/analytics", icon: <IoAnalytics /> },
       { label: "Profile", path: "/dashboard/profile", icon: <FaUser /> },

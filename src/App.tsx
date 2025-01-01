@@ -8,6 +8,8 @@ import Signup from "./pages/Signup";
 import Dashboard from "./Dashboard/Dashboard";
 import Profile from "./Dashboard/Profile";
 import Bookings from "./Dashboard/Bookings";
+import ManageOwners from "./Dashboard/ManageOwners";
+import ManageUsers from "./Dashboard/ManageUsers";
 
 function App() {
   const location = useLocation();
@@ -30,6 +32,10 @@ function App() {
             <Route path="bookings" element={<Bookings />} />
           </Route>
         </Route>
+
+        <Route path="dashboard/manage-owners" element={<ManageOwners />} />
+        <Route path="dashboard/manage-users" element={<ManageUsers />} />
+
 
         {/* Redirect any incorrect access to profile */}
         <Route path="profile" element={<Navigate to="/dashboard/profile" replace />} />
