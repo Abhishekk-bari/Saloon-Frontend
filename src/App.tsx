@@ -1,3 +1,4 @@
+// App.tsx
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import PrivateRoute from './route/PrivateRoute'; 
 import Navbar from "./components/Navbar";
@@ -6,11 +7,10 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./Dashboard/Dashboard";
 import Profile from "./Dashboard/Profile";
+import Bookings from "./Dashboard/Bookings";
 
 function App() {
   const location = useLocation();
-
-  // Define routes where the navbar should be hidden
   const hideNavbarRoutes = ["/login", "/signup", "/dashboard"];
   const shouldHideNavbar = hideNavbarRoutes.some((route) => location.pathname.startsWith(route));
 
@@ -26,8 +26,8 @@ function App() {
         {/* Protect Dashboard and all nested routes */}
         <Route element={<PrivateRoute />}>
           <Route path="dashboard/*" element={<Dashboard />}>
-            {/* Profile must be accessed via /dashboard/profile */}
             <Route path="profile" element={<Profile />} />
+            <Route path="bookings" element={<Bookings />} />
           </Route>
         </Route>
 

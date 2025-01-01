@@ -23,7 +23,7 @@ function Navbar() {
 
         {/* Hamburger Button (visible on mobile) */}
         <button
-          className="lg:hidden ml-auto text-white focus:outline-none"
+          className="lg:hidden ml-auto text-black focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <svg
@@ -50,9 +50,9 @@ function Navbar() {
         <nav
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } lg:flex lg:items-center lg:static lg:mx-auto lg:bg-transparent fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 text-white z-10`}
+          } lg:flex lg:items-center lg:static lg:mx-auto lg:bg-transparent fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 text-black z-10`}
         >
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row ">
             {navigation.map((item) => (
               <a
                 key={item.id}
@@ -71,7 +71,7 @@ function Navbar() {
           </div>
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-10 lg:pl-[55vw] text-lg font-mono">
             <button onClick={handleLoginClick}
-              className="border border-[#c1f497] text-[#c1f497] px-5 py-1 rounded-lg"
+              className="border border-[#c1f497] text-[#000000] px-5 py-1 rounded-lg"
             >
               Login
             </button>
