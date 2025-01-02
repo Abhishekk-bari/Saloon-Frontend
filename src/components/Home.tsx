@@ -1,5 +1,5 @@
 import img from "../assets/image 2.png";
-import icon from '../assets/icon.png'
+import icon from "../assets/icon.png";
 import { useNavigate } from "react-router-dom";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import {
@@ -56,17 +56,20 @@ function Home() {
   const features = [
     {
       name: "Track Bookings",
-      description: "Monitor upcoming appointments and manage client schedules easily.",
+      description:
+        "Monitor upcoming appointments and manage client schedules easily.",
       icon: CloudArrowUpIcon,
     },
     {
       name: "Discover Nearby Salons",
-    description: "Collaborate with other salons to enhance your network and reach.",
+      description:
+        "Collaborate with other salons to enhance your network and reach.",
       icon: LockClosedIcon,
     },
     {
       name: "Boost Client Engagement",
-      description: "Keep your clients informed with reminders and promotional offers.",
+      description:
+        "Keep your clients informed with reminders and promotional offers.",
       icon: ServerIcon,
     },
   ];
@@ -160,10 +163,10 @@ function Home() {
             />
           </div>
           <img
-    src={icon}
-    alt="Background Logo"
-    className="absolute top-[60vw] left-16 inset-0 w-8 object-cover z-0"
-  />
+            src={icon}
+            alt="Background Logo"
+            className="absolute top-[60vw] left-16 inset-0 w-8 object-cover z-0"
+          />
         </div>
       </div>
 
