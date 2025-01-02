@@ -30,8 +30,8 @@ function Login() {
       if (shopAddress) localStorage.setItem("shopAddress", shopAddress); // save shop address if it exists
 
       // Navigate based on role
-      if (role === "customer") navigate("/dashboard");
-      else if (role === "owner") navigate("/dashboard");
+      if (role === "customer") navigate("/find-saloon");
+      else if (role === "owner") navigate("/dashboard/my-salons");
       else if (role === "admin") navigate("/dashboard");
     } catch (err: any) {
       setError(err.response?.data?.error || "An error occurred");

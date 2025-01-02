@@ -1,6 +1,8 @@
 // components/TopBar.tsx
 import  { useState, useEffect } from "react";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { IoMdNotificationsOutline } from "react-icons/io";
+
 
 const TopBar = () => {
   const role = localStorage.getItem("role") as "customer" | "owner" | "admin";
@@ -29,7 +31,7 @@ const TopBar = () => {
 
   return (
     <div className="flex justify-between items-center p-5 bg-white shadow-md">
-      <h1 className="text-2xl font-semibold">{getWelcomeMessage(role || "customer")}</h1>
+      <h1 className="text-2xl font-semibold ">{getWelcomeMessage(role || "customer")}</h1>
 
       {/* Search Bar */}
       <div className="flex h-10 max-w-lg">
@@ -38,6 +40,10 @@ const TopBar = () => {
           placeholder="Search something"
           className="w-full px-4 py-2 border rounded-xl border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+      </div>
+      
+      <div className="hover:text-gray-300">
+      <IoMdNotificationsOutline className="text-2xl"/>
       </div>
 
       {/* Display Owner Info */}
@@ -55,7 +61,7 @@ const TopBar = () => {
               <AvatarImage src="https://github.com/shadcn.png" />
             </Avatar>
           )}
-
+          
           {shopAddress && <p className="mt-2 text-gray-600">{shopAddress}</p>}
         </div>
       )}

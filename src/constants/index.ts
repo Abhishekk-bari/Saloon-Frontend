@@ -17,3 +17,6 @@ export const navigation: {
     url: "#pricing",
   },
 ];
+
+
+// Navbar content

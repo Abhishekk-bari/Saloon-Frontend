@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 interface User {
@@ -13,8 +13,13 @@ const ManageOwners = () => {
 
   const fetchOwners = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/users/owners");
-      setOwners(response.data); // TypeScript now knows response.data matches User[]
+      const token = localStorage.getItem("token");
+      const response = await axios.get("http://localhost:5000/api/users/owners", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setOwners(response.data);
       setLoading(false);
     } catch (error) {
       console.error("Failed to fetch owners", error);
@@ -24,8 +29,13 @@ const ManageOwners = () => {
 
   const deleteOwner = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
-      setOwners(owners.filter((owner) => owner._id !== id)); // _id is now recognized
+      const token = localStorage.getItem("token");
+      await axios.delete(`http://localhost:5000/api/users/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      setOwners(owners.filter((owner) => owner._id !== id));
     } catch (error) {
       console.error("Failed to delete owner", error);
     }

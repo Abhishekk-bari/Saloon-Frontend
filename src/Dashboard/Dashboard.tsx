@@ -15,7 +15,7 @@ const Dashboard = () => {
   const role = localStorage.getItem("role") as "customer" | "owner" | "admin";
   const sidebarOptions = {
     customer: [
-      { label: "Find Salons", path: "/dashboard/find-salons", icon: <AiFillHome /> },
+      { label: "Find Salons", path: "/find-salons", icon: <AiFillHome /> },
       { label: "Bookings", path: "/dashboard/bookings", icon: <FaCalendarAlt /> },
       { label: "Favorites", path: "/dashboard/favorites", icon: <MdFavorite /> },
       { label: "Profile", path: "/dashboard/profile", icon: <FaUser /> },
