@@ -5,6 +5,7 @@ interface User {
   _id: string;
   name: string;
   email: string;
+  address: string;
 }
 
 const ManageOwners = () => {
@@ -63,6 +64,7 @@ const ManageOwners = () => {
             <tr key={owner._id}>
               <td className="border border-gray-300 px-4 py-2">{owner.name}</td>
               <td className="border border-gray-300 px-4 py-2">{owner.email}</td>
+              <td className="border border-gray-300 px-4 py-2">{owner.address}</td>
               <td className="border border-gray-300 px-4 py-2">
                 <button
                   className="bg-red-500 text-white px-3 py-1 rounded"

@@ -22,7 +22,7 @@ function Signup() {
     email: "",
     password: "",
     role: "customer", // default to customer
-    image: null,
+    image: null as File | null,
     location: "",
     shopAddress: "",
   });
