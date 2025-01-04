@@ -14,8 +14,8 @@ function Navbar() {
   }
 
   return (
-    <div className="fixed w-full top-5 z-50 bg-n-8/90 backdrop-blur-sm border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+    <div className="fixed w-full top-5 z-50 bg-n-8/90 backdrop-blur-xl border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ">
+      <div className="flex items-center lg:px-7.5 xl:px-10 max-lg:py-4">
         {/* Logo */}
         <a className="block xl:mr-8">
           <img src={logo} width={40} height={20} alt="logo" />
