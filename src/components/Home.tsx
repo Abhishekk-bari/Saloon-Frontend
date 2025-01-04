@@ -76,29 +76,33 @@ function Home() {
 
   return (
     <div className="min-h-screen text-black pt-20">
+      <div className="absolute top-0 -z-10 h-full w-full bg-white">
+        <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
+      </div>{" "}
       {/* Hero Section */}
-      <section className="flex items-center">
+      <section className="flex items-center relative">
+        {/* Backdrop */}
+        {/* <div className="absolute inset-0 bg-gray-100/70 backdrop-blur-lg z-[-1]"></div> */}
+
         {/* Left Section */}
-        <div className="flex-1 max-w-xl m-20">
+        <div className="flex-1 text-center m-20">
           <div className="mb-6">
-            <div className="flex items-center text-yellow-400">
-              <span className="mr-2 text-xl">★★★★★</span>
-              <p className="text-base text-gray-600">
-                Highly Rated Salons Near You
-              </p>
+            <div className="pl-36 flex items-center text-yellow-400">
+              <span className="text-xl">★★★★★</span>
+              <p className=" text-gray-600">Highly Rated Salons Near You</p>
             </div>
           </div>
-          <h1 className="text-7xl font-[InterVariable] mb-8">
+          <h1 className="text-9xl font-[InterVariable] font-semibold mb-8">
             Find & Book Salons Near You Instantly!
           </h1>
-          <p className="text-lg leading-relaxed mb-10">
+          <p className="text-xl leading-relaxed mb-10 font-serif">
             Discover top-rated salons and book appointments at your convenience.
             Look great, feel confident!
           </p>
-          <div className="flex items-center space-x-5">
+          <div className="flex items-center justify-center  space-x-5">
             <a
               href="#"
-              className="text-sm text-green-500 underline font-medium hover:text-green-400"
+              className="text-sm text-green-500 underline font-medium hover:text-green-400 "
             >
               Start work efficiently with UIFry SaaS product
             </a>
@@ -111,26 +115,26 @@ function Home() {
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="flex-1 flex justify-end items-center pr-20">
-          <img
-            src={img}
-            alt="Salon Booking"
-            className="w-[500px] max-w-full object-contain rounded"
-          />
-        </div>
+        {/* Right Section
+  <div className="flex-1 flex justify-end items-center pr-20">
+    <img
+      src={img}
+      alt="Salon Booking"
+      className="w-[500px] max-w-full object-contain rounded"
+    />
+  </div> */}
       </section>
-
       {/* About Section */}
       <div className="overflow-hidden bg-white py-24 sm:py-32">
+        
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
               <div className="lg:max-w-lg">
-                <h2 className="text-base font-semibold text-green-600">
+                <h2 className="pl-1 font-semibold text-green-600 text-lg">
                   Empower Your Salon
                 </h2>
-                <p className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                <p className="mt-2 text-5xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                   Manage Bookings Seamlessly
                 </p>
                 <p className="mt-6 text-lg text-gray-600">
@@ -170,6 +174,7 @@ function Home() {
         </div>
       </div>
 
+
       {/* Price Section */}
       <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div
@@ -185,8 +190,8 @@ function Home() {
           />
         </div>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-600">Pricing</h2>
-          <p className="mt-2 text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-6xl">
+          <h2 className="text-2xl font-semibold text-indigo-600">Pricing</h2>
+          <p className="mt-2 text-balance text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Choose the right plan for you
           </p>
         </div>
@@ -281,7 +286,6 @@ function Home() {
           ))}
         </div>
       </div>
-
       {/* Footer Section */}
       <footer className="bg-black text-white py-8">
         <div className="max-w-5xl mx-auto px-4 text-center">
