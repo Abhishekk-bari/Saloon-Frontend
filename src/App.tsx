@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 
 
-
+// role based login section
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./Dashboard/Dashboard";
